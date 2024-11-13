@@ -9,10 +9,10 @@ public class BrowserFactory {
 
     public static WebDriver launchBrowserWithUrl(BrowserType browserType) {
         switch (browserType) {
-            case chrome:
+            case CHROME:
                 driver = new ChromeBrowser().launchBrowser();
                 return driver;
-            case edge:
+            case EDGE:
                 driver = new EdgeBrowser().launchBrowser();
                 return driver;
             default:

@@ -14,5 +14,4 @@ public class ChromeBrowser implements Browser {
         log.info("Launching Chrome browser");
         return new ChromeDriver();
     }
-
 }

@@ -28,4 +28,5 @@ public class BrowserUtility {
         driver.get("https://www.google.com");
         log.info("Launched Url");
     }
+
 }
