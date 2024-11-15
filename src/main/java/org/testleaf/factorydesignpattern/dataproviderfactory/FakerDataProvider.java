@@ -1,5 +1,7 @@
 package org.testleaf.factorydesignpattern.dataproviderfactory;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.logging.Logger;
 
 public class FakerDataProvider implements TestDataProvider {
@@ -7,9 +9,12 @@ public class FakerDataProvider implements TestDataProvider {
     private static final Logger log = Logger.getLogger(FakerDataProvider.class.getName());
 
     @Override
-    public Object getTestData() {
+    public Map<String, String> getTestData() {
         log.info("Faker Data Provider");
-        return "faker_data_provider";
+        Map<String, String> data = new HashMap<>();
+        data.put("username", "jsonUser");
+        data.put("password", "jsonPass");
+        return data;
     }
 
 }

@@ -15,7 +15,7 @@ public class DataProviderFactory {
             case HARDCODED:
                 return new HardcodedDataProvider();
             default:
-                throw new IllegalArgumentException("Unknown Data Source");
+                throw new IllegalArgumentException("Invalid data source type");
         }
     }
 }

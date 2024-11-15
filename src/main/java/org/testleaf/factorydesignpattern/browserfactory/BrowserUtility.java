@@ -25,7 +25,7 @@ public class BrowserUtility {
     }
 
     public void launchUrl() {
-        driver.get("https://www.google.com");
+        driver.get("https://practicetestautomation.com/practice-test-login/");
         log.info("Launched Url");
     }
 

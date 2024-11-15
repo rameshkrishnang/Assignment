@@ -1,5 +1,7 @@
 package org.testleaf.factorydesignpattern.dataproviderfactory;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.logging.Logger;
 
 public class HardcodedDataProvider implements TestDataProvider {
@@ -7,9 +9,12 @@ public class HardcodedDataProvider implements TestDataProvider {
     private static final Logger log = Logger.getLogger(HardcodedDataProvider.class.getName());
 
     @Override
-    public Object getTestData() {
+    public Map<String, String> getTestData() {
         log.info("Hardcoded Data Provider");
-        return "hardcoded_data_provider";
+        Map<String, String> data = new HashMap<>();
+        data.put("username", "hardcodedUser");
+        data.put("password", "hardcodedPass");
+        return data;
     }
 
 }

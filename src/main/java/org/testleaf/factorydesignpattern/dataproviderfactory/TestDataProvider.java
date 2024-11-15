@@ -1,7 +1,9 @@
 package org.testleaf.factorydesignpattern.dataproviderfactory;
 
+import java.util.Map;
+
 public interface TestDataProvider {
 
-    Object getTestData();
+    Map<String, String> getTestData();
 
 }

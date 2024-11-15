@@ -1,11 +1,27 @@
 package org.testleaf.factorydesignpattern.dataproviderfactory;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testleaf.factorydesignpattern.browserfactory.BrowserFactory;
+import org.testleaf.factorydesignpattern.browserfactory.BrowserType;
+
+import java.util.Map;
+
 public class DataProviderTest {
+
     public static void main(String[] args) {
-        DataProviderFactory.getDataProvider(DataSourceType.EXCEL).getTestData();
-        DataProviderFactory.getDataProvider(DataSourceType.FAKER).getTestData();
-        DataProviderFactory.getDataProvider(DataSourceType.DATABASE).getTestData();
-        DataProviderFactory.getDataProvider(DataSourceType.API).getTestData();
-        DataProviderFactory.getDataProvider(DataSourceType.HARDCODED).getTestData();
+        // Retrieve data from Excel
+        TestDataProvider dataProvider = DataProviderFactory.getDataProvider(DataSourceType.EXCEL);
+        Map<String, String> credentials = dataProvider.getTestData();
+
+        String username = credentials.get("username");
+        String password = credentials.get("password");
+
+        WebDriver driver = BrowserFactory.launchBrowserWithUrl(BrowserType.EDGE);
+        BrowserFactory.launchUrl(driver);
+        driver.findElement(By.id("username")).sendKeys(username);
+        driver.findElement(By.id("password")).sendKeys(password);
+        driver.findElement(By.id("submit")).click();
     }
 }
