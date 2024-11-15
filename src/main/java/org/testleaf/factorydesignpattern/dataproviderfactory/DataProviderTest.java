@@ -2,7 +2,6 @@ package org.testleaf.factorydesignpattern.dataproviderfactory;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testleaf.factorydesignpattern.browserfactory.BrowserFactory;
 import org.testleaf.factorydesignpattern.browserfactory.BrowserType;
 
