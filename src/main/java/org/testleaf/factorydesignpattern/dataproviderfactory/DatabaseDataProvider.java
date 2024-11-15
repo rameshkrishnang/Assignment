@@ -12,8 +12,8 @@ public class DatabaseDataProvider implements TestDataProvider {
     public Map<String, String> getTestData() {
         log.info("Database Data Provider");
         Map<String, String> data = new HashMap<>();
-        data.put("username", "dbUser");
-        data.put("password", "dbPass");
+        data.put("username", "student");
+        data.put("password", "Password123");
         return data;
     }
 

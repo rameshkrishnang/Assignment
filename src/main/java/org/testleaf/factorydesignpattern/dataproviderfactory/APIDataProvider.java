@@ -12,8 +12,8 @@ public class APIDataProvider implements TestDataProvider {
     public Map<String, String> getTestData() {
         log.info("API Data Provider");
         Map<String, String> data = new HashMap<>();
-        data.put("username", "apiUser");
-        data.put("password", "apiPass");
+        data.put("username", "student");
+        data.put("password", "Password123");
         return data;
     }
 }

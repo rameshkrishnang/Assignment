@@ -12,8 +12,8 @@ public class HardcodedDataProvider implements TestDataProvider {
     public Map<String, String> getTestData() {
         log.info("Hardcoded Data Provider");
         Map<String, String> data = new HashMap<>();
-        data.put("username", "hardcodedUser");
-        data.put("password", "hardcodedPass");
+        data.put("username", "student");
+        data.put("password", "Password123");
         return data;
     }
 

@@ -12,8 +12,8 @@ public class ExcelDataProvider implements TestDataProvider{
     public Map<String, String> getTestData() {
         log.info("Excel Data Provider");
         Map<String, String> data = new HashMap<>();
-        data.put("username", "excelUser");
-        data.put("password", "excelPass");
+        data.put("username", "student");
+        data.put("password", "Password123");
         return data;
     }
 
